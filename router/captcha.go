@@ -6,9 +6,9 @@ import (
 )
 
 func InitCaptchaRouter(Router *gin.RouterGroup) {
-	BaseRoute := Router.Group("")
+	CaptchaRoute := Router.Group("")
 	{
 		captCtl := new(controllers.CaptchaController)
-		BaseRoute.POST("captcha", captCtl.Captcha)
+		CaptchaRoute.POST("captcha", captCtl.Captcha)
 	}
 }

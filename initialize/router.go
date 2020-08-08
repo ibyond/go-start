@@ -16,7 +16,7 @@ func Routers() *gin.Engine {
 	var Router = gin.Default()
 	global.GstLog.Debug("use middleware logger")
 	Router.Use(middleware.Cors())
-	Router.Use(middleware.LoadTls())
+	//Router.Use(middleware.LoadTls())
 
 	ApiGroup := Router.Group("")
 	router.InitCaptchaRouter(ApiGroup)
